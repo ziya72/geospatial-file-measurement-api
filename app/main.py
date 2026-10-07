@@ -1,6 +1,7 @@
 import tempfile
 from pathlib import Path
 from fastapi import FastAPI, File, UploadFile
+from app.measure import measure_features
 
 from app.parser import read_geofile
 
@@ -13,4 +14,9 @@ def upload_file(file: UploadFile = File(...)):
         path = Path(tmp) / f"upload{suffix}"
         path.write_bytes(file.file.read())
         gdf = read_geofile(path)
-    return {"filename": file.filename, "feature_count": len(gdf), "crs": str(gdf.crs)}
+    return {
+        "filename": file.filename,
+        "feature_count": len(gdf),
+        "crs": str(gdf.crs),
+        "features": measure_features(gdf),
+    }
