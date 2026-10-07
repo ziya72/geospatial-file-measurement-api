@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Folder><name>survey</name>
+  <Placemark id="survey.1">
+	<name>square</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>78.0901471207482,27.890214745315 78.0899057898075,27.8992304925925 78.0797578304114,27.8990156659148 78.08,27.89 78.0901471207482,27.890214745315</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark id="survey.2">
+	<name>road</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <LineString><coordinates>78.0801210427549,27.885492161893 78.1004145575854,27.8859208258993</coordinates></LineString>
+  </Placemark>
+  <Placemark id="survey.3">
+	<name>well</name>
+      <Point><coordinates>78.0849526852418,27.8946153208637</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
